@@ -1,0 +1,54 @@
+
+Assignment 2: Create a Table (FutureStars and FutureStarsEducation)
+FutureStars columns Id, FirstName, MiddleName, LastName, DOB, IsMarried, HeightInCms and 
+FutureStarsEducation columns (Id,FutureStarsId, DegreeName, DegreeBranch, DateOfCompletion, CollegeName)
+Education Details will be from SSLS, PU and Eng and masters if you have
+Create the Tables for above, Select appropriate data types (select char, varchar and nvarchar for the string columns FN,MN, LastName) as discussed in the class and Create each of the constraints discussed in class.
+
+In addition to above you can add new tables or new columns as well based whatever you want to experiment
+
+
+
+Assignment 3:
+ 1. Create a table
+2. Drop the table 
+3. Create and Drop using If exists 
+4. Rename the table
+ 5. Change the data type of a column using ALTER table 
+6. Rename a Column using sp_rename
+
+
+Assignment 4: 1. Download the Demo Database as mentioned above. 
+2. write inner join, left outer join, right outer join, full join query 
+3. Write left outer join equivalent query of inner join Table to use 
+: [dbo].[DimGeography], [dbo].[DimStore] FILTER to use: (Where condition) where StoreName='Contoso Bellevue Store'
+
+Assignment 5: 1. Select data from [dbo].[DimProduct] and [dbo].[FactSales] and
+ use an inner join and do a max, min, avg and count aggregate function on SalesAmount based on ProductName for Product Name containing key word 420. 
+Also use the 
+Having condition based on value > 10000 and then do an
+Order by ProductName 
+2. Apply Rank, Dense_Rank, Row_Number on same tables above and identity Rank based on SalesAmount for each of the ProdutNames 
+3. Use DimProductCategory and apply case statement. if ProductCategoryName is Music, Movies and Audio Books then Change the value to YouTube
+
+
+Assignment 6: 1. Use the Assignment 5 (2) use case and write the same query with the view
+ 2. Write a stored procedure that that uses the Assignment 5 (1) use case and pass the parameter 420 into proc to get the result output. 
+Also within the same proc insert the Assignment 6 (1) use case data into temp table. 
+show the out from temp table and then drop the temp table within the proc
+ 3)View the definition of proc and view via sp_helptext
+ 4) use the sys.objects and sys.comments to view the view and sp defn 
+ 5)use exc command to run the proc   (add exec before the sys.object)
+
+Assignment 7: Create a simple scalar function to convert date column in a table to US CST time zone value via a function .
+ In addition to this you can find when table value function is used and create a simple table valued function
+
+Assignment 8 :Create  a table by Name Employee and another table by name EmployeeHIstory.
+ Add an insert, update and delete trigger where in an entry need to be in EmployeeHistory Table when an Insert, Update and delete is done with a start date and end date on each row in EmployeeHistory 
+2. Identify any large table in Contoso retail and identify any column where you want to use it in where clause. run the query clause with where clause and see the time. Now clean a non clustered index on that column and then run the query and see if there is any improvement in the query.
+
+Assignment 9: Practice creating partition of data on FactSales table in ContosoRetail table
+
+Assignment 10: 1. Create tables based on each normal forms and understand the difference between each forms 2. use Contoso Retail FactSales and join to various table it has references. 
+Run the execution plan and add indexes as suggested and then run again the Execution Plan and see the differences. Use Where clauses in the query.
+ IF required Add partition to the FactSales Table
